@@ -19,3 +19,5 @@ ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/nvim ~/.config/nvim
 
 chsh -s /bin/zsh
+ln -s ~/.dotfiles/alacritty ~/.config/alacritty
+ln -s ~/.dotfiles/fontconfig ~/.config/fontconfig
