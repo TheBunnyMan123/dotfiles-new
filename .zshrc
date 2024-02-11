@@ -19,3 +19,7 @@ prompt() {
 }
 
 precmd_functions=($precmd_functions prompt)
+
+alias ls="ls --color=always"
+alias ll="ls -l"
+alias grep="grep --color=always"
