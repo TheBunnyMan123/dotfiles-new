@@ -5,13 +5,20 @@ then
   sudo pacman -S zsh tmux neovim
 elif [ 'command -v "apt" > /dev/null' ]
 then
-  sudo apt install zsh tmux neovim
+  sudo apt install zsh tmux neovim 
 elif [ 'command -v "dnf" > /dev/null' ]
 then
   sudo dnf install zsh tmux neovim
 else
   echo "Please install zsh and tmux"
 fi
+
+echo "Installing JetBrains Mono Nerd Font"
+TMPDIR="$(mktemp -d /tmp/nerd_fonts_XXXXXX)"
+cd "$TMPDIR"
+curl -Lo JetBrainsMono.zip https://github.com/ryanoasis/nerd-fonts/releases/download/v3.1.1/JetBrainsMono.zip
+unzip ./JetBrainsMono.zip -d ./patched-fonts/
+curl https://raw.githubusercontent.com/ryanoasis/nerd-fonts/96497b4fef014743867b6289f7761408f9e04e89/install.sh | bash
 
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/tmux ~/.config/tmux
