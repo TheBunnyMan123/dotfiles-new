@@ -1,24 +1,26 @@
 #!/bin/bash
 
+PKGS="tmux neovim zoxide fzf"
+
 if [ 'command -v "brew" > /dev/null' ]
 then
-  read -p "Install tmux and neovim via brew? [y\n] " -n 1 -r
+  read -p "Install tmux, neovim, zoxide, and fzf via brew? [y\n] " -n 1 -r
   echo ""
   if [[ ! $REPLY =~ ^[Yy]$ ]]
   then
-    brew install tmux neovim
+    brew install $PKGS
   fi
 elif [ 'command -v "pacman" > /dev/null' ]
 then
-  sudo pacman -S zsh tmux neovim
+  sudo pacman -S zsh $PKGS
 elif [ 'command -v "apt" > /dev/null' ]
 then
-  sudo apt install zsh tmux neovim 
+  sudo apt install zsh $PKGS
 elif [ 'command -v "dnf" > /dev/null' ]
 then
-  sudo dnf install zsh tmux neovim
+  sudo dnf install zsh $PKGS
 else
-  echo "Please install zsh and tmux"
+  echo "Please install zsh, tmux, zoxide, and fzf"
 fi
 
 echo "Installing JetBrains Mono Nerd Font"

@@ -3,6 +3,10 @@ import = [
   "~/.config/alacritty/catppuccin-macchiato.toml"
 ]
 
+[shell] 
+program = "/usr/bin/env"
+args = ["zsh"]
+
 # Yoinked from the arch wiki
 [font]
 size = 12.0
