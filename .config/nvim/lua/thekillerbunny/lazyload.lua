@@ -50,73 +50,73 @@ require("lazy").setup({
   {'hrsh7th/nvim-cmp'},
   {'L3MON4D3/LuaSnip'},
   { "catppuccin/nvim", name = "catppuccin", priority = 1000,
-    config = function()
-      require("catppuccin").setup({
-        flavour = "macchiato", -- latte, frappe, macchiato, mocha
-        background = { -- :h background
-        light = "latte",
-        dark = "macchiato",
-      },
-      transparent_background = false, -- disables setting the background color.
-      show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
-      term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
-      dim_inactive = {
-        enabled = false, -- dims the background color of inactive window
-        shade = "dark",
-        percentage = 0.15, -- percentage of the shade to apply to the inactive window
-      },
-      no_italic = false, -- Force no italic
-      no_bold = false, -- Force no bold
-      no_underline = false, -- Force no underline
-      styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
-      comments = { "italic" }, -- Change the style of comments
-      conditionals = { "italic" },
-      loops = {},
-      functions = {},
-      keywords = {},
-      strings = {},
-      variables = {},
-      numbers = {},
-      booleans = {},
-      properties = {},
-      types = {},
-      operators = {},
+  config = function()
+    require("catppuccin").setup({
+      flavour = "macchiato", -- latte, frappe, macchiato, mocha
+      background = { -- :h background
+      light = "latte",
+      dark = "macchiato",
     },
-    color_overrides = {},
-    custom_highlights = {},
-    integrations = {
-      cmp = true,
-      gitsigns = true,
-      nvimtree = true,
-      treesitter = true,
-      notify = false,
-      mini = {
-        enabled = true,
-        indentscope_color = "",
-      },
-      -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+    transparent_background = false, -- disables setting the background color.
+    show_end_of_buffer = false, -- shows the '~' characters after the end of buffers
+    term_colors = false, -- sets terminal colors (e.g. `g:terminal_color_0`)
+    dim_inactive = {
+      enabled = false, -- dims the background color of inactive window
+      shade = "dark",
+      percentage = 0.15, -- percentage of the shade to apply to the inactive window
     },
-  })
+    no_italic = false, -- Force no italic
+    no_bold = false, -- Force no bold
+    no_underline = false, -- Force no underline
+    styles = { -- Handles the styles of general hi groups (see `:h highlight-args`):
+    comments = { "italic" }, -- Change the style of comments
+    conditionals = { "italic" },
+    loops = {},
+    functions = {},
+    keywords = {},
+    strings = {},
+    variables = {},
+    numbers = {},
+    booleans = {},
+    properties = {},
+    types = {},
+    operators = {},
+  },
+  color_overrides = {},
+  custom_highlights = {},
+  integrations = {
+    cmp = true,
+    gitsigns = true,
+    nvimtree = true,
+    treesitter = true,
+    notify = false,
+    mini = {
+      enabled = true,
+      indentscope_color = "",
+    },
+    -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
+  },
+})
 
-  -- setup must be called before loading
-  vim.cmd.colorscheme "catppuccin"
+-- setup must be called before loading
+vim.cmd.colorscheme "catppuccin"
 end
   },
   {
-    "nvim-treesitter/nvim-treesitter", 
+    "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
     config = function ()
       local configs = require("nvim-treesitter.configs")
 
       configs.setup({
-        ensure_installed = { "c", "lua", "json", "vim", "vimdoc", "query", "java", "c_sharp", "nix" },
+        ensure_installed = { "c", "lua", "pkl", "json", "vim", "vimdoc", "query", "java", "c_sharp", "nix" },
         sync_install = true,
         highlight = { enable = true },
         indent = { enable = false },  
       })
     end
   },
-
+  { "apple/pkl-neovim", build=":TSInstall pkl" },
   {
     "folke/which-key.nvim",
     event = "VeryLazy",
