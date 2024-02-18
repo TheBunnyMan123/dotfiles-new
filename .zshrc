@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 
+export HISTFILE="$HOME/.zsh_history"
+export HISTSIZE=1000
+export SAVEHIST=1000
+setopt appendhistory
+
 test -z "$TMUX" && (tmux attach || tmux new-session)
 
 autoload -Uz vcs_info
