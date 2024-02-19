@@ -1,13 +1,5 @@
 #!/usr/bin/env zsh
 
-test -z "$TMUX" && (tmux attach &> /dev/null || tmux new-session)
-
-for file in ~/shell/*
-do
-  FULLPATH=$(realpath $file)
-  source $FULLPATH
-done
-
 autoload -Uz vcs_info
 precmd() { vcs_info }
 
@@ -26,7 +18,3 @@ prompt() {
 
 precmd_functions=($precmd_functions prompt)
 
-if (( $+commands[zoxide] ))
-then
-  eval "$(zoxide init zsh --cmd cd)"
-fi
