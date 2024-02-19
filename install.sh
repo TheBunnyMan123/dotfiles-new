@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PKGS="tmux neovim zoxide fzf stow"
+PKGS="tmux neovim zoxide fzf stow eza"
 
 if [ 'command -v "brew" > /dev/null' ]
 then
