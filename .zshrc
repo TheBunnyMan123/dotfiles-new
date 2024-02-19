@@ -30,6 +30,8 @@ alias ll="ls -alh"
 
 alias tree="ls --tree"
 
+alias cat="bat"
+
 alias grep="grep --color=always"
 
 eval "$(zoxide init zsh --cmd cd)"
