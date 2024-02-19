@@ -27,6 +27,9 @@ precmd_functions=($precmd_functions prompt)
 
 alias ls="eza --color=always --color-scale=all --color-scale-mode=fixed --icons=always"
 alias ll="ls -alh"
+
+alias tree="ls --tree"
+
 alias grep="grep --color=always"
 
 eval "$(zoxide init zsh --cmd cd)"
