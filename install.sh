@@ -1,26 +1,26 @@
 #!/bin/bash
 
-PKGS="tmux neovim zoxide fzf stow eza bat"
+PKGS="ripgrep tmux neovim zoxide fzf stow eza bat"
 
-if [ 'command -v "brew" > /dev/null' ]
+if [ -x "$(command -v "brew")" ]
 then
-  read -p "Install tmux, stow, neovim, zoxide, and fzf via brew? [y\n] " -n 1 -r
+  read -p "Install [$PKGS] via brew? [y\n] " -n 1 -r
   echo ""
-  if [[ ! $REPLY =~ ^[Yy]$ ]]
+  if [[ $REPLY =~ ^[Yy]$ ]]
   then
     brew install $PKGS
   fi
-elif [ 'command -v "pacman" > /dev/null' ]
+elif [ -x "$(command -v "pacman")" ]
 then
   sudo pacman -S zsh $PKGS
-elif [ 'command -v "apt" > /dev/null' ]
+elif [ -x "$(command -v "apt")" ]
 then
   sudo apt install zsh $PKGS
-elif [ 'command -v "dnf" > /dev/null' ]
+elif [ -x "$(command -v "dnf")" ]
 then
   sudo dnf install zsh $PKGS
 else
-  echo "Please install zsh, stow, tmux, zoxide, and fzf"
+  echo "Please install $PKGS and midnigght-commander"
 fi
 
 echo "Installing JetBrains Mono Nerd Font"
