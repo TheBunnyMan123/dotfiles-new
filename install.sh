@@ -1,26 +1,8 @@
 #!/bin/bash
 
-PKGS="ripgrep tmux neovim zoxide fzf stow eza bat w3m"
+PKGS="ripgrep tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
 
-if [ -x "$(command -v "brew")" ]
-then
-  read -p "Install [$PKGS] an midnight-commander via brew? [y\n] " -n 1 -r
-  echo ""
-  if [[ $REPLY =~ ^[Yy]$ ]]
-  then
-    brew install $PKGS midnight-commander
-  fi
-elif [ -x "$(command -v "pacman")" ]
-then
-  sudo pacman -S zsh $PKGS mc
-elif [ -x "$(command -v "apt")" ]
-  sudo apt install zsh $PKGS mc
-elif [ -x "$(command -v "dnf")" ]
-then
-  sudo dnf install zsh $PKGS mc
-else
-  echo "Please install $PKGS and midnight-commander"
-fi
+sudo pacman -S zsh $PKGS mc
 
 echo "Installing JetBrains Mono Nerd Font"
 TMPDIR="$(mktemp -d /tmp/nerd_fonts_XXXXXX)"
