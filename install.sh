@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PKGS="ripgrep tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
+PKGS="btop adwaita-cursors ripgrep tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
 
 sudo pacman -S zsh $PKGS mc
 
