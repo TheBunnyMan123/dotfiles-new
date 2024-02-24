@@ -2,13 +2,7 @@
 ## Installation
 First clone the repo
 
-To install, install the following packages:
-- tmux
-- neovim
-- zoxide
-- fzf
-- stow
-- zsh
+To install, install the packages in the install script
 
 Then, install the JetBrains Mono Nerd Font.
 

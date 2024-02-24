@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PKGS="ripgrep tmux neovim zoxide fzf stow eza bat"
+PKGS="ripgrep tmux neovim zoxide fzf stow eza bat w3m"
 
 if [ -x "$(command -v "brew")" ]
 then
