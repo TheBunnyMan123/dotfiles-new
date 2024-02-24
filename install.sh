@@ -4,6 +4,8 @@ PKGS="ripgrep tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
 
 sudo pacman -S zsh $PKGS mc
 
+sudo systemctl enable sddm --force
+
 echo "Installing JetBrains Mono Nerd Font"
 TMPDIR="$(mktemp -d /tmp/nerd_fonts_XXXXXX)"
 cd "$TMPDIR"
