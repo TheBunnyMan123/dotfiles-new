@@ -9,7 +9,7 @@ urlencode() {
 gsearch() {
   if [ $1 ]
   then
-    w3m "https://www.google.com/search?q=$(urlencode $1)"
+    w3m "https://www.google.com/search?q=$(urlencode $(sed 's/^"\(.*\)"$/\1/' <<<"$1"))"
   else
     echo "Please provide search string"
   fi
