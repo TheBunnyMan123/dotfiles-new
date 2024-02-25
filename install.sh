@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PKGS="btop adwaita-cursors ripgrep tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
+PKGS="xplasma-pa pipewire-pulse dg-desktop-portal-kde firefox-developer-edition btop adwaita-cursors ripgrep tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
 
 sudo pacman -S zsh $PKGS mc
 
@@ -11,6 +11,9 @@ git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde
 cd catppuccin-kde
 source install.sh
 ln -s ~/.local/share/icons/ ~/.icons
+
+firefox-developer-edition "https://github.com/catppuccin/dark-reader"
+firefox-developer-edition "https://color.firefox.com/?theme=XQAAAAJHBAAAAAAAAABBqYhm849SCicxcUcPX38oKRicm6da8pG5gi-DrbS7fiEFLUzDsWXWyUHMSkHZ2PpRK_LvZGTF44fp7VjbASbxkoZAmYAwEJIoRnjw8xrOTGV_TjmyI1jBzmpM9P7ysk1XcU5Vim_Fm-lEdd2D1sQPsP1UC1SXCENsCDFL_dvGtcmeCmbfO6OGGOJq3ruAS_Gz79X7J3IPhPKRi0y17vC4T81wBaZnK5IwST8XwXhsZW2xuHYXlQW9lWh_0MNERp0985NX-OWb_-ihrUcCUtuKvpNVRhWiOZEGlf8aqXacHiX1iC-UFzj9yYek5qPRUzkk0PbDL3_klrAKV3FhiFwzCdwhv8YLU-O8D_iavg6KYN8B5YNgd1CGF1betSDtAH2A8YHzjQlW16NmIECM0pNIUwPIAfdyRQ-aJb506nBvtvjIb3D_pn9BgwOl-Ok0CmqQ0Tzjt5DGy1bJL8OX8lKslypKhSobuDw63XSwbG9yxD4rKvo_NnhWJBdY1xtGLs4MOLeRe4Oc10HPwY2o-9WL3ktoaN2k17lOsMoF836BLjf_wIADwA"
 
 echo "Installing JetBrains Mono Nerd Font"
 TMPDIR="$(mktemp -d /tmp/nerd_fonts_XXXXXX)"
