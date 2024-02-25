@@ -6,6 +6,12 @@ sudo pacman -S zsh $PKGS mc
 
 sudo systemctl enable sddm --force
 
+cd $(mktemp -d /tml/catppuccin-plasma-XXXXXX)
+git clone --depth=1 https://github.com/catppuccin/kde catppuccin-kde
+cd catppuccin-kde
+source install.sh
+ln -s ~/.local/share/icons/ ~/.icons
+
 echo "Installing JetBrains Mono Nerd Font"
 TMPDIR="$(mktemp -d /tmp/nerd_fonts_XXXXXX)"
 cd "$TMPDIR"
