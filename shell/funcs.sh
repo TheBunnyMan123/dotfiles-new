@@ -14,3 +14,13 @@ gsearch() {
     echo "Please provide search string"
   fi
 }
+
+mvtotrash() {
+  if [ $1 ]
+  then
+    mkdir ~/.trash &> /dev/null
+    mv -v $1 "$HOME/$1 - $(date --iso-8601=ns)"
+  else
+    echo "Please provide file to delete"
+  fi
+}

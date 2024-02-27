@@ -18,3 +18,5 @@ fi
 alias grep="grep --color=always"
 
 alias archwiki="w3m \"wiki.archlinux.org\""
+
+alias rm="mvtotrash"
