@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PKGS="xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
+PKGS="flameshot xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
 
 sudo pacman -S zsh $PKGS mc --needed
 
