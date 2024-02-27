@@ -42,6 +42,8 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="caffeine"/>
+        <value type="string" value="caffeine-indicator"/>
         <value type="string" value="wi-fi network connection “attizitn22” active: attizitn22 (79%)"/>
         <value type="string" value="wi-fi network connection “attizitn22” active: attizitn22 (75%)"/>
         <value type="string" value="xfce4-power-manager"/>
@@ -49,6 +51,8 @@
         <value type="string" value="networkmanager applet"/>
       </property>
       <property name="known-items" type="array">
+        <value type="string" value="caffeine"/>
+        <value type="string" value="caffeine-cup-empty"/>
         <value type="string" value="flameshot"/>
       </property>
     </property>
@@ -105,10 +109,12 @@
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce4-power-manager-settings.desktop"/>
+        <value type="string" value="caffeine.desktop"/>
+        <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="xfce4-screensaver-preferences.desktop"/>
         <value type="string" value="xfce-settings-manager.desktop"/>
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
-        <value type="string" value="xfce-session-settings.desktop"/>
         <value type="string" value="xfce4-clipman.desktop"/>
         <value type="string" value="org.xfce.ristretto.desktop"/>
         <value type="string" value="xfce4-settings-editor.desktop"/>
