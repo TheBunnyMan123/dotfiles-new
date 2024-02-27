@@ -6,11 +6,11 @@
     <value type="int" value="1"/>
     <property name="dark-mode" type="bool" value="true"/>
     <property name="panel-1" type="empty">
-      <property name="position" type="string" value="p=6;x=0;y=0"/>
+      <property name="position" type="string" value="p=6;x=17;y=540"/>
       <property name="length" type="double" value="100"/>
       <property name="position-locked" type="bool" value="true"/>
       <property name="icon-size" type="uint" value="0"/>
-      <property name="size" type="uint" value="26"/>
+      <property name="size" type="uint" value="32"/>
       <property name="plugin-ids" type="array">
         <value type="int" value="3"/>
         <value type="int" value="2"/>
@@ -25,6 +25,10 @@
         <value type="int" value="14"/>
       </property>
       <property name="mode" type="uint" value="0"/>
+      <property name="nrows" type="uint" value="1"/>
+      <property name="length-adjust" type="bool" value="true"/>
+      <property name="autohide-behavior" type="uint" value="1"/>
+      <property name="enable-struts" type="bool" value="false"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -109,6 +113,7 @@
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="recent" type="array">
+        <value type="string" value="panel-preferences.desktop"/>
         <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="caffeine.desktop"/>
         <value type="string" value="xfce-session-settings.desktop"/>
@@ -118,7 +123,6 @@
         <value type="string" value="xfce4-clipman.desktop"/>
         <value type="string" value="org.xfce.ristretto.desktop"/>
         <value type="string" value="xfce4-settings-editor.desktop"/>
-        <value type="string" value="xfce4-about.desktop"/>
       </property>
     </property>
   </property>
