@@ -24,7 +24,7 @@
         <value type="int" value="13"/>
         <value type="int" value="14"/>
       </property>
-      <property name="mode" type="uint" value="0"/>
+      <property name="mode" type="uint" value="2"/>
       <property name="nrows" type="uint" value="1"/>
       <property name="length-adjust" type="bool" value="true"/>
       <property name="autohide-behavior" type="uint" value="1"/>
@@ -113,6 +113,7 @@
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="recent" type="array">
+        <value type="string" value="xfce-mouse-settings.desktop"/>
         <value type="string" value="panel-preferences.desktop"/>
         <value type="string" value="xfce4-power-manager-settings.desktop"/>
         <value type="string" value="caffeine.desktop"/>
@@ -122,7 +123,6 @@
         <value type="string" value="org.flameshot.Flameshot.desktop"/>
         <value type="string" value="xfce4-clipman.desktop"/>
         <value type="string" value="org.xfce.ristretto.desktop"/>
-        <value type="string" value="xfce4-settings-editor.desktop"/>
       </property>
     </property>
   </property>
