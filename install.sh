@@ -27,5 +27,10 @@ curl https://raw.githubusercontent.com/ryanoasis/nerd-fonts/96497b4fef014743867b
 
 chsh -s /bin/zsh
 
+echo "Setting swappiness"
+echo "vm.swappiness = 10" | sudo tee /etc/sysctl.d/99-swappiness.conf
+sudo sysctl -w vm.swappiness=10
+
+echo "To set up a swap file, run swapfile.sh"
 echo "Please run the xfce4.sh file after starting xfce4"
 echo "If you are willing to change grub theme, run grub.sh"

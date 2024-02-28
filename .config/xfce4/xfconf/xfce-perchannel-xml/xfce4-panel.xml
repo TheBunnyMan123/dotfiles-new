@@ -29,6 +29,8 @@
       <property name="length-adjust" type="bool" value="true"/>
       <property name="autohide-behavior" type="uint" value="1"/>
       <property name="enable-struts" type="bool" value="false"/>
+      <property name="enter-opacity" type="uint" value="100"/>
+      <property name="leave-opacity" type="uint" value="100"/>
     </property>
   </property>
   <property name="plugins" type="empty">
@@ -46,6 +48,8 @@
     <property name="plugin-6" type="string" value="systray">
       <property name="square-icons" type="bool" value="true"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="wi-fi network connection “attizitn22” active: attizitn22 (77%)"/>
+        <value type="string" value="flameshot"/>
         <value type="string" value="caffeine"/>
         <value type="string" value="caffeine-indicator"/>
         <value type="string" value="wi-fi network connection “attizitn22” active: attizitn22 (79%)"/>
@@ -93,9 +97,9 @@
         <value type="string" value="+switch-user"/>
         <value type="string" value="+separator"/>
         <value type="string" value="+suspend"/>
-        <value type="string" value="-hibernate"/>
-        <value type="string" value="-hybrid-sleep"/>
-        <value type="string" value="-separator"/>
+        <value type="string" value="+hibernate"/>
+        <value type="string" value="+hybrid-sleep"/>
+        <value type="string" value="+separator"/>
         <value type="string" value="+shutdown"/>
         <value type="string" value="+restart"/>
         <value type="string" value="+separator"/>
@@ -103,7 +107,7 @@
         <value type="string" value="-logout-dialog"/>
       </property>
       <property name="appearance" type="uint" value="1"/>
-      <property name="custom-title" type="string" value="Session"/>
+      <property name="custom-title" type="string" value="POW"/>
     </property>
     <property name="plugin-3" type="string" value="whiskermenu">
       <property name="favorites" type="array">
@@ -121,14 +125,16 @@
       <property name="show-command-menueditor" type="bool" value="false"/>
       <property name="show-command-switchuser" type="bool" value="false"/>
       <property name="show-command-logoutuser" type="bool" value="false"/>
-      <property name="show-command-restart" type="bool" value="true"/>
-      <property name="show-command-shutdown" type="bool" value="true"/>
-      <property name="show-command-suspend" type="bool" value="true"/>
+      <property name="show-command-restart" type="bool" value="false"/>
+      <property name="show-command-shutdown" type="bool" value="false"/>
+      <property name="show-command-suspend" type="bool" value="false"/>
       <property name="show-command-hibernate" type="bool" value="false"/>
       <property name="command-logoutuser" type="string" value="xfce4-session-logout --logout --fast"/>
       <property name="show-command-lockscreen" type="bool" value="false"/>
       <property name="recent-items-max" type="int" value="0"/>
       <property name="menu-height" type="int" value="499"/>
+      <property name="show-command-logout" type="bool" value="false"/>
+      <property name="show-command-profile" type="bool" value="false"/>
     </property>
   </property>
 </channel>
