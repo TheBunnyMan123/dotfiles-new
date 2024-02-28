@@ -113,17 +113,22 @@
       </property>
       <property name="view-mode" type="int" value="1"/>
       <property name="recent" type="array">
-        <value type="string" value="xfce-mouse-settings.desktop"/>
-        <value type="string" value="panel-preferences.desktop"/>
-        <value type="string" value="xfce4-power-manager-settings.desktop"/>
-        <value type="string" value="caffeine.desktop"/>
-        <value type="string" value="xfce-session-settings.desktop"/>
-        <value type="string" value="xfce4-screensaver-preferences.desktop"/>
-        <value type="string" value="xfce-settings-manager.desktop"/>
-        <value type="string" value="org.flameshot.Flameshot.desktop"/>
-        <value type="string" value="xfce4-clipman.desktop"/>
-        <value type="string" value="org.xfce.ristretto.desktop"/>
       </property>
+      <property name="launcher-show-name" type="bool" value="true"/>
+      <property name="button-single-row" type="bool" value="false"/>
+      <property name="profile-shape" type="int" value="1"/>
+      <property name="menu-opacity" type="int" value="0"/>
+      <property name="show-command-menueditor" type="bool" value="false"/>
+      <property name="show-command-switchuser" type="bool" value="false"/>
+      <property name="show-command-logoutuser" type="bool" value="false"/>
+      <property name="show-command-restart" type="bool" value="true"/>
+      <property name="show-command-shutdown" type="bool" value="true"/>
+      <property name="show-command-suspend" type="bool" value="true"/>
+      <property name="show-command-hibernate" type="bool" value="false"/>
+      <property name="command-logoutuser" type="string" value="xfce4-session-logout --logout --fast"/>
+      <property name="show-command-lockscreen" type="bool" value="false"/>
+      <property name="recent-items-max" type="int" value="0"/>
+      <property name="menu-height" type="int" value="499"/>
     </property>
   </property>
 </channel>

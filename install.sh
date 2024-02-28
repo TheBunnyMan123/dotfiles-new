@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PKGS="flameshot xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
+PKGS="xorg-server flameshot xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m plasma-desktop sddm"
 declare -a AURPKGS=("yay" "catppuccin-cursors-macchiato" "catppuccin-gtk-theme-macchiato" "caffeine-ng")
 sudo pacman -S zsh $PKGS mc --needed
 
