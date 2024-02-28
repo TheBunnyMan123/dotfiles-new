@@ -28,3 +28,4 @@ curl https://raw.githubusercontent.com/ryanoasis/nerd-fonts/96497b4fef014743867b
 chsh -s /bin/zsh
 
 echo "Please run the xfce4.sh file after starting xfce4"
+echo "If you are willing to change grub theme, run grub.sh"
