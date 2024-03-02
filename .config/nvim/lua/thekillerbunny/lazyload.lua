@@ -22,6 +22,12 @@ require("lazy").setup({
         ["<leader>sc"] = { ":Silicon<CR>", "Snapshot Code" },
       }, { mode = "v" })
     end,
+    config = function()
+      require("silicon").setup({
+        -- Configuration here, or leave empty to use defaults
+        font = "JetBrainsMono Nerd Font Mono=34;Noto Color Emoji=34"
+      })
+    end,
 	},
 	{
 		'nvim-telescope/telescope.nvim', tag = '0.1.5',

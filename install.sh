@@ -4,6 +4,8 @@ PKGS="rust gdb lldb vlc busybox zip unzip tar p7zip xdg-desktop-portal xdg-deskt
 AURPKGS="prismlauncher-qt5-bin catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato caffeine-ng"
 sudo pacman -S zsh $PKGS mc --needed
 
+echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee -a /etc/environment
+
 sudo systemctl enable sddm --force
 
 cd $(mktemp -d /tmp/yay)
