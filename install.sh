@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PKGS="xdg-desktop-portal xdg-desktop-portal-gtk xorg-server flameshot xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m alacritty keepassxc syncthing"
-AURPKGS="prismlauncher-bin catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato caffeine-ng"
+AURPKGS="prismlauncher-qt5-bin catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato caffeine-ng"
 sudo pacman -S zsh $PKGS mc --needed
 
 sudo systemctl enable sddm --force
@@ -11,6 +11,9 @@ git clone "https://aur.archlinux.org/yay-bin.git" yay-bin
 cd yay-bin
 makepkg -si
 cd ..
+
+echo "Fonts"
+sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-jetbrains-mono-nerd
 
 yay -S $AURPKGS
 
