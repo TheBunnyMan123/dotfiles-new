@@ -19,7 +19,7 @@ mvtotrash() {
   if [ $1 ]
   then
     mkdir ~/.trash &> /dev/null
-    mv -v $1 "$HOME/$1 - $(date --iso-8601=ns)"
+    mv $1 "$HOME/.trash/$(basename $1) - $(date -u +'%y-%m-%d-%H-%M-%S-%N')"
   else
     echo "Please provide file to delete"
   fi
