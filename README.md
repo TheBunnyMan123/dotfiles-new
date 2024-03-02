@@ -1,4 +1,5 @@
 # My Dotfiles (new version)
+FYI: automatic xfce changes will be included in commits
 ## Installation
 First clone the repo
 
