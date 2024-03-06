@@ -16,11 +16,9 @@ gsearch() {
 }
 
 mvtotrash() {
-  if [ $1 ]
-  then
-    mkdir ~/.trash &> /dev/null
-    mv $1 "$HOME/.trash/$(basename $1) - $(date -u +'%y-%m-%d-%H-%M-%S-%N')"
-  else
-    echo "Please provide file to delete"
-  fi
+  mkdir ~/.trash &>/dev/null
+  for var in $@
+  do
+    mv $var "$HOME/.trash/$(basename $var) - $(date -u +'%y-%m-%d-%H-%M-%S-%N')"
+  done
 }

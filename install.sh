@@ -1,12 +1,12 @@
 #!/bin/bash
 
-PKGS="network-manager-applet rust gdb lldb vlc busybox zip unzip tar p7zip xdg-desktop-portal xdg-desktop-portal-gtk xorg-server flameshot xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m alacritty keepassxc syncthing"
+PKGS="networkmanager network-manager-applet rust gdb lldb vlc busybox zip unzip tar p7zip xdg-desktop-portal xdg-desktop-portal-gtk xorg-server flameshot xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m alacritty keepassxc syncthing"
 AURPKGS="prismlauncher-qt5-bin catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato caffeine-ng"
 sudo pacman -S zsh $PKGS mc --needed
 
 echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee -a /etc/environment
 
-sudo systemctl enable sddm --force
+sudo systemctl enable NetworkManager --force --now
 
 cd $(mktemp -d /tmp/yay)
 git clone "https://aur.archlinux.org/yay-bin.git" yay-bin
