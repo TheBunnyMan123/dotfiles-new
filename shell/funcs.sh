@@ -19,6 +19,6 @@ mvtotrash() {
   mkdir ~/.trash &>/dev/null
   for var in $@
   do
-    mv $var "$HOME/.trash/$(basename $var) - $(date -u +'%y-%m-%d-%H-%M-%S-%N')"
+    mv "$var" "$HOME/.trash/$(basename $var) - $(date -u +'%y-%m-%d-%H-%M-%S-%N')"
   done
 }
