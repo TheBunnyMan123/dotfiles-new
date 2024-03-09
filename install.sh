@@ -1,23 +1,15 @@
 #!/bin/bash
 
-PKGS="networkmanager network-manager-applet rust gdb lldb vlc busybox zip unzip tar p7zip xdg-desktop-portal xdg-desktop-portal-gtk xorg-server flameshot xfce4 xfce4-goodies base-devel pipewire-pulse firefox-developer-edition tmux neovim zoxide fzf stow eza bat w3m alacritty keepassxc syncthing"
-AURPKGS="prismlauncher-qt5-bin catppuccin-cursors-macchiato catppuccin-gtk-theme-macchiato caffeine-ng"
-sudo pacman -S zsh $PKGS mc --needed
+CURRENTDIR=$(pwd)
+
+bash $CURRENTDIR/install-files/packages.sh
 
 echo "QT_QPA_PLATFORMTHEME=qt5ct" | sudo tee -a /etc/environment
 
 sudo systemctl enable NetworkManager --force --now
 
-cd $(mktemp -d /tmp/yay)
-git clone "https://aur.archlinux.org/yay-bin.git" yay-bin
-cd yay-bin
-makepkg -si
-cd ..
-
 echo "Fonts"
 sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji noto-fonts-extra ttf-jetbrains-mono-nerd
-
-yay -S $AURPKGS
 
 sudo cp wallpaper /wallpapers
 
@@ -33,10 +25,4 @@ curl https://raw.githubusercontent.com/ryanoasis/nerd-fonts/96497b4fef014743867b
 
 chsh -s /bin/zsh
 
-echo "Setting swappiness"
-echo "vm.swappiness = 10" | sudo tee /etc/sysctl.d/99-swappiness.conf
-sudo sysctl -w vm.swappiness=10
-
-echo "To set up a swap file, run swapfile.sh"
-echo "Please run the xfce4.sh file after starting xfce4"
-echo "If you are willing to change grub theme, run grub.sh"
+bash $CURRENTDIR/install-files/swapfile.sh
