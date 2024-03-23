@@ -1,0 +1,3 @@
+[player]
+dxvk = false
+renderer = "Vulkan"

@@ -23,3 +23,10 @@ alias rm="mvtotrash"
 
 alias espeak="espeak -a 200 -g 0 -k 16 -p 46"
 alias espeak-ng="espeak-ng -a 200 -g 0 -k 16 -p 46"
+
+alias start="./start.sh"
+
+if (( $+commands[zoxide] ))
+then
+  eval "$(zoxide init zsh --cmd cd)"
+fi
