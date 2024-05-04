@@ -1,8 +1,12 @@
 [xfdesktop-version-4.10.3+-rcfile_format]
 4.10.3+=true
 
-[/home/bunny/Desktop/steam.desktop]
+[FA49-6913]
 row=2
+col=0
+
+[Trash]
+row=3
 col=0
 
 [/]
