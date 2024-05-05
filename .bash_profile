@@ -1,4 +1,4 @@
 if [[ $PS1 ]]
 then
-  zsh
+  exec zsh
 fi

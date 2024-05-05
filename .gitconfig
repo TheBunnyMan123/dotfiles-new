@@ -1,15 +1,17 @@
 [credential "https://github.com"]
 	helper = 
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/run/current-system/sw/bin/gh auth git-credential
 [credential "https://gist.github.com"]
 	helper = 
-	helper = !/usr/bin/gh auth git-credential
+	helper = !/run/current-system/sw/bin/gh auth git-credential
 [user]
 	email = bunny@thekillerbunny.com
   name = TheBunnyMan123
 [pull]
-  rebase = false
+  rebase = true
 [init]
   defaultbranch = master
 [core]
   pager = w3m
+[safe]
+	directory = /etc/nixos

@@ -22,3 +22,7 @@ mvtotrash() {
     mv "$var" "$HOME/.trash/$(basename $var) - $(date -u +'%y-%m-%d-%H-%M-%S-%N')"
   done
 }
+
+runpkg() {
+  bash -c "nix run nixpkgs#$1"
+}
