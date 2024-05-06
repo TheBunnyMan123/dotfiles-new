@@ -7,7 +7,8 @@ then
 
   alias gls="/dev/ls"
 fi
-alias ll="ls -alh"
+alias ll="ls -l"
+alias l="ls -al"
 
 if (( $+commands[bat] ))
 then
