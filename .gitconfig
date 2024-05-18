@@ -15,3 +15,5 @@
   pager = w3m
 [safe]
 	directory = /etc/nixos
+[commit]
+	gpgsign = true
